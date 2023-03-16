@@ -1,6 +1,7 @@
 <?php 
     session_start();
     $counter = isset($_SESSION["items"])  ? count($_SESSION["items"]) : 0;
+    $_SESSION["items"] = isset($_SESSION["items"])  ? $_SESSION["items"] : [];
     $groep = isset($_GET["Klas"]) ? $_GET["Klas"] : "null";
 
     include("account/account.php");
@@ -22,6 +23,21 @@
     $klassen = [];
     while ($result=$stmtKlassen->fetch()){
         $klassen[] = $result;
+    }
+
+    
+    if($_SERVER["REQUEST_METHOD"] == "POST"){
+        if(isset($_POST["NORMAAL"])){
+            $_SESSION["items"][count($_SESSION["items"])] = $_POST["klas"]."_".$_POST["NORMAAL"];
+        }
+        elseif(isset($_POST["GEK"])){
+            $_SESSION["items"][count($_SESSION["items"])] = $_POST["klas"]."_".$_POST["GEK"];
+        }
+        else{
+            $_SESSION["items"][count($_SESSION["items"])] = $_POST["klas"]."_".$_POST["PAKKET"];
+        }
+        $counter++;
+        var_dump($_POST);
     }
 ?>
 <html>
@@ -66,6 +82,7 @@
                         <p>€5,50<p>
                         <input name = "PAKKET" type="submit" value="PAKKET">
                     </div>
+                    <input type="text" name="klas" value="<?php $groep ?>">
                 </form>
             </div>
         <?php endif; ?>
@@ -78,7 +95,7 @@
             var errors = [];
 
             function klasgekozen(){
-                window.location.href = "photos.php?"+klas.value;
+                window.location.href = "photos.php?"+klas.value+"#kiesKlasDiv";
             }
 
             function ErrorNormaal(origine){

@@ -34,4 +34,8 @@ nav img{
 body{
     margin: 0px;
     background-color: aquamarine;
+    scroll-behavior: smooth;
+}
+html{
+    scroll-behavior: smooth;
 }
