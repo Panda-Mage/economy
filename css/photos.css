@@ -1,0 +1,49 @@
+#kiesklasDiv{
+    background-color:darkseagreen;
+    width: 750px;
+    height: 75px;
+    border-radius: 25px;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+}
+#kiesklasDiv label{
+    position: relative;
+    color: aliceblue;
+    left: 40%;
+    display: inline-block;
+    transform: translate(-50%, -50%);
+}
+#kiesklasDiv select{
+    display: inline-block;
+    position: relative;
+    margin-top: 40px;
+    left: 50%;
+    width: 200px;
+    transform: translate(-50%, -50%);
+}
+#photoDiv{
+    position: absolute;
+    top: 50%;
+    width: calc(100vw - 480px);
+    height: auto;
+    transform: translate(-50%, 0%);
+    left: 50%;
+}
+#photoDiv img{
+    width: 40%;
+    display: inline-block;
+    border: white solid 10px;
+}
+#photoDiv #links{
+    transform: translate(+10%, 0%);
+
+}
+#photoDiv #rechts{
+    transform: translate(+25%, 0%);
+
+}
+body{
+    background-color: aquamarine;
+}

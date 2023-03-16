@@ -1,4 +1,8 @@
 <?php 
+    session_start();
+    $counter = isset($_SESSION["items"])  ? count($_SESSION["items"]) : 0;
+    $groep = isset($_GET["Klas"]) ? $_GET["Klas"] : "null";
+
     include("account/account.php");
     try {
         $conn = new PDO("mysql:host=$servername;dbname=$database;charset=utf8mb4", $username, $password);
@@ -22,15 +26,58 @@
 ?>
 <html>
     <head>
-
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/photos.css">
     </head>
     <body>
-        <form>
-            <select name="Klass">
-                <?php foreach($klassen as $klas): ?>
-                    <option><?php echo $klas["klasnaam"] ?></option>
-                <?php endforeach; ?>
-            </select>
-        </form>
+        <nav>
+            <a href="index.php"><p>HOME</p></a>
+            <a href="photos.php"><p>PHOTO'S</p></a>
+            <a href="winkelMandje.php"><img src="foto's/custom_foto's/winkelMandje.png"><p id="counter"><?php echo $counter ?></p></a> 
+        </nav>
+        <div id="kiesKlasDiv">
+            <form methode="post">
+                <label>KLASSEN:</label>
+                <select id="klas" name="Klas" onchange="this.form.submit(klasgekozen)">
+                    <option value="null">SELECT</option>
+                    <?php foreach($klassen as $klas): ?>
+                        <option value="<?php echo $klas["klasnaam"]; ?>" <?php if($klas["klasnaam"] == $groep){echo "selected";} ?>><?php echo $klas["klasnaam"]; ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </form>
+        </div>
+        <?php if($groep != "null"): ?>
+            <div id="photoDiv">
+                <img src="foto's/<?php echo $groep; ?>/Normaal.jpg" id="links" onError='ErrorNormaal(this)'>
+                <img src="foto's/<?php echo $groep; ?>/Gek.jpg" id="rechts" onError='ErrorNormaal(this)'>
+            </div>
+            <div id="koopDiv">
+                
+            </div>
+        <?php else: ?>
+
+        <?php endif; ?>
+        
+        <script>
+            var klas = document.getElementById('klas');
+            var linkerFoto = document.getElementById('links');
+            var rechterFoto = document.getElementById('rechts');
+
+            var errors = [];
+
+            function klasgekozen(){
+                window.location.href = "photos.php?"+klas.value;
+            }
+
+            function ErrorNormaal(origine){
+                origine.src = "foto's/custom_foto's/errorNormaal";
+
+            }
+
+            function ErrorGek(origine){
+                origine.src = "foto's/custom_foto's/errorGek";
+            }
+            
+        </script>
     </body>
 </html>
