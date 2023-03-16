@@ -36,7 +36,7 @@
             <a href="winkelMandje.php"><img src="foto's/custom_foto's/winkelMandje.png"><p id="counter"><?php echo $counter ?></p></a> 
         </nav>
         <div id="kiesKlasDiv">
-            <form methode="post">
+            <form>
                 <label>KLASSEN:</label>
                 <select id="klas" name="Klas" onchange="this.form.submit(klasgekozen)">
                     <option value="null">SELECT</option>
@@ -52,10 +52,22 @@
                 <img src="foto's/<?php echo $groep; ?>/Gek.jpg" id="rechts" onError='ErrorNormaal(this)'>
             </div>
             <div id="koopDiv">
-                
+                <form method="post">
+                    <div id="normaal">
+                        <p>€3,50</p>
+                        <input name = "Normaal" type="submit" value="NORMAAL">
+                    </div>
+                    <div id="gek">
+                        <p>€3,50</p>
+                        <input name = "GEK" type="submit" value="GEK">
+                    </div>
+                    <br>
+                    <div id="pakket">
+                        <p>€5,50<p>
+                        <input name = "PAKKET" type="submit" value="PAKKET">
+                    </div>
+                </form>
             </div>
-        <?php else: ?>
-
         <?php endif; ?>
         
         <script>

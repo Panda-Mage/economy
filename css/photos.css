@@ -44,6 +44,33 @@
     transform: translate(+25%, 0%);
 
 }
-body{
-    background-color: aquamarine;
+#koopDiv{
+    position: absolute;
+    top: 780px;
+    width: 100%;
+}
+#koopDiv input{
+    background-color: cadetblue;
+    border-radius: 25px;
+    border: none;
+    font-size: 30px;
+    padding: 5px;
+}
+#koopDiv input:hover{
+    background-color: darkcyan;
+    cursor: grab;
+}
+#koopDiv p{
+    text-align: center;
+    font-size: 20px;
+}
+#koopDiv div{
+    display: inline-block;
+}
+#koopDiv #normaal{
+    margin-left: 23%;
+    margin-right: 35%;
+}
+#koopDiv #pakket{
+    margin-left: 45%;
 }
