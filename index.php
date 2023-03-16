@@ -1,20 +1,17 @@
 <?php 
-
+    session_start();
+    $counter = 
 ?>
 <html>
     <head>
-
+        <link rel="stylesheet" href="css/index.css">
     </head>
     <body>
         <nav>
-            <p><a href="index.php">HOME</a></p>
+            <a href="index.php"><p>HOME</p></a>
+            <a href="photos.php"><p>PHOTO'S</p></a>
+            <a href="winkelMandje.php"><img src="foto's/custom_foto's/winkelMandje.png"><p id="counter">0</p></a> 
         </nav>
-        <form>
-            <select name="Klass">
-                <?php foreach(): ?>
-
-                <? endforeach; ?>
-            </select>
-        </form>
+        
     </body>
 </html>
