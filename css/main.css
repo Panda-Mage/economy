@@ -1,5 +1,5 @@
 nav{
-    background-color: blue;
+    background-color: rgb(60, 226, 211);;
     margin: 0px;
     padding: 3px;
 }
@@ -45,4 +45,8 @@ footer{
 }
 footer img{
     width: 125px;
+}
+h1{
+    text-align: center;
+    color: rgb(197, 7, 81);
 }

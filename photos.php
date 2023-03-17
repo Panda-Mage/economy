@@ -43,6 +43,8 @@
     <head>
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/photos.css">
+        <link rel="icon" href="foto's/custom_foto's/gosnapit.png">
+        <title>PHOTO'S</title>
     </head>
     <body>
         <nav>
