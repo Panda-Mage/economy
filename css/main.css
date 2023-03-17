@@ -1,10 +1,13 @@
 nav{
-    background-color: rgb(60, 226, 211);;
+    background-color: rgb(60, 226, 211);
     margin: 0px;
     padding: 3px;
+    border-bottom: 2px solid lightseagreen;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
 }
 nav p {
-    color: white;
+    color: rgb(197, 7, 81);
     text-decoration: none;
     font-size: 50px;
     margin-left: 30px;
@@ -30,6 +33,7 @@ nav img{
     position: absolute;
     right: 30;
     top: 40;
+    color: white;
 }
 body{
     margin: 0px;

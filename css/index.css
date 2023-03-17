@@ -1,0 +1,14 @@
+div p{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+h2{
+    color: rgb(60, 226, 211);
+    text-align: center;
+}
+#headtag{
+    border: 3px lightgray dotted;
+    background-color: white;
+    width: 40%;
+    margin: auto;
+}

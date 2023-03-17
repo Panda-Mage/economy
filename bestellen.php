@@ -14,19 +14,30 @@
 ?>
 <html>
     <head>
-
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/bestellen.css">
+        <link rel="icon" href="foto's/custom_foto's/gosnapit.png">
+        <title>BESTELLEN</title>
     </head>
     <body>
+        <nav>
+            <a href="winkelMandje.php">
+                <p><═ BACK</p>
+            </a>
+        </nav>
+        <br>
         <form>
             <label>Voornaam ouder/voogd</label>
             <input type="text">
-            <label>Naam ouder/voogd</label>
+            <label>Achternaam ouder/voogd</label>
             <input type="text">
             <label>Voornaam kind</label>
             <input type="text">
-            <label>Naam kind</label>
+            <label>Achternaam kind</label>
             <input type="text">
+            <br>
             <input type="submit" value="E-PAY">
+            <img src="foto's/custom_foto's/EPAYlogo.jfif">
         </form>
     </body>
 </html>

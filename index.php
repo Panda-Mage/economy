@@ -15,8 +15,16 @@
             <a href="photos.php"><p>PHOTO'S</p></a>
             <a href="winkelMandje.php"><img src="foto's/custom_foto's/winkelMandje.png"><p id="counter"><?php echo $counter ?></p></a> 
         </nav>
-        <h1>PHOTOGRAFIE</h1>
-        <p>Wij zijn een studentenonderneming die met behulp van Vlajo en het go-atheneum onze verkoop van de klassen foto's kan waar maken.</p>
+        <br>
+        <br>
+        <br>
+        <div>
+            <div id="headtag">
+                <h1>PHOTOGRAFIE</h1>
+                <h2>GO SNAP IT</h2>
+            </div>
+            <p>Wij zijn een studentenonderneming die met behulp van Vlajo en het go-atheneum onze verkoop van de klassen foto's kan waar maken.</p>
+        </div>
         <footer><img src="foto's/custom_foto's//button_onder_toezicht_van_Vlajovzw_HR.jpg" ></footer>
     </body>
 </html>
