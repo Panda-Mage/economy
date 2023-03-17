@@ -1,21 +1,10 @@
 <?php 
     session_start();
-    
-    include("account/account.php");
-    try {
-        $conn = new PDO("mysql:host=$servername;dbname=$database;charset=utf8mb4", $username, $password);
-        // set the PDO error mode to exception
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        echo '<script>console.log("Connected successfully")</script>';
-    } catch(PDOException $e) {
-        echo "Connection failed: " . $e->getMessage();
-        echo '<script>console.log("Connection failed: "' . $e->getMessage() . ')</script>';
-    }
 
     
     if($_SERVER["REQUEST_METHOD"] == "POST"){
         if(isset($_POST["betalen"])){
-
+            header("Location: bestellen.php");
         }
         else{
             unset($_SESSION["items"][$_POST["row"]]);
@@ -58,7 +47,7 @@
                     </tr>
                     <tr style="background-color: transparen;">
                         <td></td>
-                        <form method="post"><td><input type="submit" name="betalen" value="BETALEN"></td></form>
+                        <form method="post"><td><input type="submit" name="betalen" value="BESTELLEN"></td></form>
                     </tr>
                 </table>
             </div>
