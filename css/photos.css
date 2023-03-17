@@ -49,14 +49,14 @@
     top: 780px;
     width: 100%;
 }
-#koopDiv input{
+#koopDiv div input{
     background-color: cadetblue;
     border-radius: 25px;
     border: none;
     font-size: 30px;
     padding: 5px;
 }
-#koopDiv input:hover{
+#koopDiv div input:hover{
     background-color: darkcyan;
     cursor: grab;
 }
@@ -73,4 +73,11 @@
 }
 #koopDiv #pakket{
     margin-left: 45%;
+}
+.invisible{
+    background-color: transparent;
+    color: transparent;
+    border: transparent;
+    width: 0px;
+    height: 0px;
 }

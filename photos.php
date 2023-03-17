@@ -37,12 +37,11 @@
             $_SESSION["items"][count($_SESSION["items"])] = $_POST["klas"]."_".$_POST["PAKKET"];
         }
         $counter++;
-        var_dump($_POST);
     }
 ?>
 <html>
     <head>
-        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/photos.css">
     </head>
     <body>
@@ -82,7 +81,7 @@
                         <p>€5,50<p>
                         <input name = "PAKKET" type="submit" value="PAKKET">
                     </div>
-                    <input type="text" name="klas" value="<?php $groep ?>">
+                    <input type="text" class="invisible" name="klas" value="<?php echo $groep ?>">
                 </form>
             </div>
         <?php endif; ?>
@@ -108,5 +107,6 @@
             }
             
         </script>
+        <footer style="bottom: <?php if($groep!="null"){echo "-60%";}else{echo "0%";} ?> ;"><img src="foto's/custom_foto's//button_onder_toezicht_van_Vlajovzw_HR.jpg" ></footer>
     </body>
 </html>

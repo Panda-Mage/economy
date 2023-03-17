@@ -1,0 +1,32 @@
+#tableDiv tr{
+    width: 200px;
+}
+.header{
+    background-color: darkslategray;
+}
+#tableDiv table{
+    size: auto;
+}
+
+#tableDiv p{
+    color: white;
+}
+table{
+    position: absolute;
+    width: 500px;
+    text-align: center;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    top: 250px;
+}
+table tr td .invisible{
+    background-color: transparent;
+    color: transparent;
+    border: transparent;
+    width: 0px;
+    height: 0px;
+}
+.trash:hover{
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
