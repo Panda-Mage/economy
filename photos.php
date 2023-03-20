@@ -1,4 +1,5 @@
-<?php 
+<?php
+
     session_start();
     $counter = isset($_SESSION["items"])  ? count($_SESSION["items"]) : 0;
     $_SESSION["items"] = isset($_SESSION["items"])  ? $_SESSION["items"] : [];
@@ -6,7 +7,7 @@
 
     include("account/account.php");
     try {
-        $conn = new PDO("mysql:host=$servername;dbname=$database;charset=utf8mb4", $username, $password);
+        $conn = new PDO("mysql:host=$servername;dbname=$database;charset=utf8mb4;", $username, $password);
         // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo '<script>console.log("Connected successfully")</script>';
@@ -45,12 +46,12 @@
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/photos.css">
         <link rel="icon" href="foto's/custom_foto's/gosnapit.png">
-        <title>PHOTO'S</title>
+        <title>FOTO'S</title>
     </head>
     <body>
         <nav>
             <a href="index.php"><p>HOME</p></a>
-            <a href="photos.php"><p>PHOTO'S</p></a>
+            <a href="photos.php"><p>FOTO'S</p></a>
             <a href="winkelMandje.php"><img src="foto's/custom_foto's/winkelMandje.png"><p id="counter"><?php echo $counter ?></p></a> 
         </nav>
         <div id="kiesKlasDiv">
