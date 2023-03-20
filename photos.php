@@ -27,6 +27,7 @@
 
     
     if($_SERVER["REQUEST_METHOD"] == "POST"){
+        var_dump($_POST);
         if(isset($_POST["NORMAAL"])){
             $_SESSION["items"][count($_SESSION["items"])] = $_POST["klas"]."_".$_POST["NORMAAL"];
         }
@@ -66,13 +67,13 @@
         <?php if($groep != "null"): ?>
             <div id="photoDiv">
                 <img src="foto's/<?php echo $groep; ?>/Normaal.jpg" id="links" onError='ErrorNormaal(this)'>
-                <img src="foto's/<?php echo $groep; ?>/Gek.jpg" id="rechts" onError='ErrorNormaal(this)'>
+                <img src="foto's/<?php echo $groep; ?>/Gek.jpg" id="rechts" onError='ErrorGek(this)'>
             </div>
             <div id="koopDiv">
                 <form method="post">
                     <div id="normaal">
                         <p>€3,50</p>
-                        <input name = "Normaal" type="submit" value="NORMAAL">
+                        <input name = "NORMAAL" type="submit" value="NORMAAL">
                     </div>
                     <div id="gek">
                         <p>€3,50</p>
@@ -96,16 +97,16 @@
             var errors = [];
 
             function klasgekozen(){
-                window.location.href = "photos.php?"+klas.value+"#kiesKlasDiv";
+                window.location.href = "photos.php?"+klas.value;
             }
 
             function ErrorNormaal(origine){
-                origine.src = "foto's/custom_foto's/errorNormaal";
+                origine.src = "foto's/custom_foto's/errorNormaal.jpg";
 
             }
 
             function ErrorGek(origine){
-                origine.src = "foto's/custom_foto's/errorGek";
+                origine.src = "foto's/custom_foto's/errorGek.jpg";
             }
             
         </script>
