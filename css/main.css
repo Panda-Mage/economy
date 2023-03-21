@@ -19,7 +19,6 @@ nav {
     margin: 0px;
     padding: 3px;
     box-shadow: 0em 0px 0.8em black;
-    border-bottom: 2px solid lightseagreen;
 }
 
 nav p {
@@ -47,6 +46,7 @@ nav img {
 body {
     margin: 0px;
     background-color: #f2f2f2;
+    background-image: url("../foto's/custom_foto's/matermark.png");
     scroll-behavior: smooth;
 }
 
@@ -55,9 +55,6 @@ html {
 }
 
 footer {
-    width: 100vw;
-    height: 6em;
-    background-color: rgb(38, 38, 38);
     position: absolute;
     bottom: 0%;
 }
@@ -65,7 +62,6 @@ footer {
 footer img {
     width: 8em;
     height: 4em;
-    margin: 1em auto
 }
 
 h1 {

@@ -8,11 +8,13 @@
         <title>AFBEELDING</title>
     </head>
     <body>
-        <nav>
-            <a href="index.php"><p>HOME</p></a>
-            <a href="photos.php"><p>PHOTO'S</p></a>
-            <a href="winkelMandje.php"><img src="foto's/custom_foto's/winkelMandje.png"><p id="counter"><?php echo $counter ?></p></a> 
-        </nav>
+
+        <div include-html="navbar.html"></div>
         <img src="">
+        
+        <script src="js/includehtml.js"></script>
+        <script>
+            includeHTML();
+        </script>
     </body>
 </html>
