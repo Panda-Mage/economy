@@ -31,7 +31,6 @@
 
     
     if($_SERVER["REQUEST_METHOD"] == "POST"){
-        var_dump($_POST);
         if(isset($_POST["NORMAAL"])){
             $_SESSION["items"][count($_SESSION["items"])] = $_POST["klas"]."_".$_POST["NORMAAL"];
         }
