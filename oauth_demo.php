@@ -73,7 +73,7 @@ if ($_SESSION["oauth_demo"]["ingelogd"] && isset($_GET["koop"])) {
     $result = curl_exec($ch);
     $result = json_decode($result, true);
     $appToken = $result["token"];
-var_dump($appToken);
+    var_dump($appToken);
     // met deze appToken kunnen we een betaling uitvoeren voor de userToken
     $options = array(
         'Authorization: Bearer ' . $appToken,
@@ -84,7 +84,7 @@ var_dump($appToken);
     $description = "klasse foto's"; // dit zal de leerling zien in de epay transactie
     $message = "u aankoop bedraagt: \r\n"; // dit komt in het email bericht
     foreach($_SESSION["items"] as $item){
-        $message += $item."\r\n";
+        $message += $item."\r\n"; 
     }
     $dataJson = json_encode(array(
         "appName" => $epayAppName,

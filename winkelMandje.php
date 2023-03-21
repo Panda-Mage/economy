@@ -8,7 +8,7 @@
     if($_SERVER["REQUEST_METHOD"] == "POST"){
         if(isset($_POST["betalen"])){
             
-            header("Location: oauth_demo.php");
+            header("Location: oauth_demo.php?koop=true");
         }
         else{
             unset($_SESSION["items"][$_POST["row"]]);
