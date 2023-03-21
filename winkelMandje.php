@@ -1,7 +1,10 @@
 <?php 
     session_start();
 
-    
+    if( $_SESSION["oauth_demo"]["ingelogd"] != true;){
+        header("Location: login.php");
+    }
+
     if($_SERVER["REQUEST_METHOD"] == "POST"){
         if(isset($_POST["betalen"])){
             header("Location: bestellen.php");

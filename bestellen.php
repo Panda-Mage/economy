@@ -1,6 +1,10 @@
 <?php
     session_start();
     
+    if( $_SESSION["oauth_demo"]["ingelogd"] != true;){
+        header("Location: login.php");
+    }
+
     include("account/account.php");
     try {
         $conn = new PDO("mysql:host=$servername;dbname=$database;charset=utf8mb4", $username, $password);
