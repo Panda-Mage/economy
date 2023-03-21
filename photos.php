@@ -4,7 +4,7 @@
     $_SESSION["items"] = isset($_SESSION["items"])  ? $_SESSION["items"] : [];
     $groep = isset($_GET["Klas"]) ? $_GET["Klas"] : "null";
 
-    if( $_SESSION["oauth_demo"]["ingelogd"] != true;){
+    if( $_SESSION["oauth_demo"]["ingelogd"] != true){
         header("Location: login.php");
     }
 

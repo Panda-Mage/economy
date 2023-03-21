@@ -1,9 +1,9 @@
 <?php 
 
-    if( $_SESSION["oauth_demo"]["ingelogd"] != true;){
+    if( $_SESSION["oauth_demo"]["ingelogd"] != true){
         header("Location: login.php");
     }
-    
+
 ?>
 <html>
     <head>
