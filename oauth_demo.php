@@ -104,7 +104,7 @@ if ($_SESSION["oauth_demo"]["ingelogd"] && isset($_GET["koop"])) {
     var_dump($_SESSION["prijs"]);
     die();
     $_SESSION["oauth_demo"]["message"] = $result;
-    header("Location: oauth_demo.php");
+    header("Location: completed.php");
 }
 
 
