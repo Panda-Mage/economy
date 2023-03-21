@@ -80,9 +80,12 @@ var_dump($appToken);
         'Content-Type: application/json'
     );
     $userToken = $_SESSION["oauth_demo"]["userToken"];
-    $bedrag = prijs;
-    $description = "een lekker taartje"; // dit zal de leerling zien in de epay transactie
-    $message = "proficiat met uw lekker taartje. Laat het u smaken"; // dit komt in het email bericht
+    $bedrag = $_SESSION["prijs"];
+    $description = "klasse foto's"; // dit zal de leerling zien in de epay transactie
+    $message = "u aankoop bedraagt: \r\n"; // dit komt in het email bericht
+    foreach($_SESSION["items"] as $item){
+        $message += $item."\r\n";
+    }
     $dataJson = json_encode(array(
         "appName" => $epayAppName,
         "userToken" => $userToken,
