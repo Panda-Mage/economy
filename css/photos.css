@@ -1,4 +1,4 @@
-#kiesklasDiv{
+#kiesklasDiv {
     background-color:darkseagreen;
     width: 750px;
     height: 75px;
@@ -8,14 +8,16 @@
     top: 40%;
     transform: translate(-50%, -50%);
 }
-#kiesklasDiv label{
+
+#kiesklasDiv label {
     position: relative;
     color: aliceblue;
     left: 40%;
     display: inline-block;
     transform: translate(-50%, -50%);
 }
-#kiesklasDiv select{
+
+#kiesklasDiv select {
     display: inline-block;
     position: relative;
     margin-top: 40px;
@@ -23,58 +25,70 @@
     width: 200px;
     transform: translate(-50%, -50%);
 }
-#photoDiv{
+
+#photoDiv {
     position: absolute;
     top: 50%;
-    width: calc(100vw - 480px);
+    width: 60em;
     height: auto;
     transform: translate(-50%, 0%);
     left: 50%;
 }
-#photoDiv img{
-    width: 40%;
+
+#photoDiv img {
+    width: 26em;
     display: inline-block;
     border: white solid 10px;
 }
-#photoDiv #links{
+
+#photoDiv #links {
     transform: translate(+10%, 0%);
 
 }
-#photoDiv #rechts{
+
+#photoDiv #rechts {
     transform: translate(+25%, 0%);
 
 }
-#koopDiv{
+
+#koopDiv {
     position: absolute;
     top: 780px;
     width: 100%;
 }
-#koopDiv div input{
+
+#koopDiv div input {
     background-color: cadetblue;
     border-radius: 25px;
     border: none;
     font-size: 30px;
     padding: 5px;
 }
-#koopDiv div input:hover{
+
+#koopDiv div input:hover {
     background-color: darkcyan;
     cursor: grab;
 }
-#koopDiv p{
+
+#koopDiv p {
     text-align: center;
     font-size: 20px;
 }
-#koopDiv div{
+
+#koopDiv div {
     display: inline-block;
 }
-#koopDiv #normaal{
+
+#koopDiv #normaal {
     margin-left: 23%;
     margin-right: 35%;
 }
-#koopDiv #pakket{
+
+#koopDiv #pakket {
     margin-left: 45%;
 }
-.invisible{
+
+.invisible {
     background-color: transparent;
     color: transparent;
     border: transparent;
