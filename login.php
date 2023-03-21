@@ -74,6 +74,7 @@ if ($gebruikerIsIngelogd) {
             <?php header("Location: index.php"); ?>
         <?php endif; ?>
     <?php else: ?>
+        <?php header("Location: oauth_demo.php?login=1") ;?>
         <p>Je bent niet ingelogd</p>
         <p><a href="oauth_demo.php?login=1">Login</a></p>
     <?php endif; ?>
