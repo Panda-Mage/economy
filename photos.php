@@ -69,8 +69,16 @@
         </div>
         <?php if($groep != "null"): ?>
             <div id="photoDiv">
-                <img src="foto's/<?php echo $groep; ?>/Normaal.jpg" id="links" onError='ErrorNormaal(this)'>
-                <img src="foto's/<?php echo $groep; ?>/Gek.jpg" id="rechts" onError='ErrorGek(this)'>
+                <form action="afbeelding.php" method="POST">
+                    <input style="display: none;" type="text" name="klas" value="<?php echo $groep; ?>">
+                    <input style="display: none;" type="text" name="foto" value="/Normaal.jpg">
+                    <img onclick="submitForm(event)" src="foto's/<?php echo $groep; ?>/Normaal.jpg" id="links" onError='ErrorNormaal(this)'>
+                </form>
+                <form action="afbeelding.php" method="POST">
+                    <input style="display: none;" type="text" name="klas" value="<?php echo $groep; ?>">
+                    <input style="display: none;" type="text" name="foto" value="/Gek.jpg">
+                    <img onclick="submitForm(event)" src="foto's/<?php echo $groep; ?>/Gek.jpg" id="rechts" onError='ErrorGek(this)'>
+                </form>
             </div>
             <div id="koopDiv">
                 <form method="post">
@@ -111,6 +119,12 @@
 
             function ErrorGek(origine){
                 origine.src = "foto's/custom_foto's/errorGek.jpg";
+            }
+
+            function submitForm(event) {
+                console.log(event.target.parentElement);
+                let form = event.target.parentElement;
+                form.submit();
             }
             
         </script>
