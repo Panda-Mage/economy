@@ -8,6 +8,8 @@
         $foto = isset($_POST["foto"]) ? $_POST["foto"] : null;
         $fotoSource = "foto's/" . $groep . "/" . $foto;
 
+    if( $_SESSION["oauth_demo"]["ingelogd"] != true){
+        header("Location: login.php");
     }
 
 ?>

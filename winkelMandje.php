@@ -1,10 +1,14 @@
 <?php 
     session_start();
 
-    
+    if( $_SESSION["oauth_demo"]["ingelogd"] != true){
+        header("Location: login.php");
+    }
+
     if($_SERVER["REQUEST_METHOD"] == "POST"){
         if(isset($_POST["betalen"])){
-            header("Location: bestellen.php");
+            
+            header("Location: oauth_demo.php?koop=true");
         }
         else{
             unset($_SESSION["items"][$_POST["row"]]);
@@ -43,7 +47,7 @@
                     <?php endforeach; ?>
                     <tr>
                         <td style="background-color:red;"><p>TOTAAL</p></td>
-                        <td style="background-color:darkred;"><p><?php echo '€'.$prijs; ?></p></td>
+                        <td style="background-color:darkred;"><p><?php echo '€'.$prijs; $_SESSION["prijs"] = $prijs;?></p></td>
                     </tr>
                     <tr style="background-color: transparen;">
                         <td></td>

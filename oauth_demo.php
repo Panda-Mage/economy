@@ -73,16 +73,19 @@ if ($_SESSION["oauth_demo"]["ingelogd"] && isset($_GET["koop"])) {
     $result = curl_exec($ch);
     $result = json_decode($result, true);
     $appToken = $result["token"];
-var_dump($appToken);
+    var_dump($appToken);
     // met deze appToken kunnen we een betaling uitvoeren voor de userToken
     $options = array(
         'Authorization: Bearer ' . $appToken,
         'Content-Type: application/json'
     );
     $userToken = $_SESSION["oauth_demo"]["userToken"];
-    $bedrag = prijs;
-    $description = "een lekker taartje"; // dit zal de leerling zien in de epay transactie
-    $message = "proficiat met uw lekker taartje. Laat het u smaken"; // dit komt in het email bericht
+    $bedrag = $_SESSION["prijs"];
+    $description = "klasse foto's"; // dit zal de leerling zien in de epay transactie
+    $message = "u aankoop bedraagt: \r\n"; // dit komt in het email bericht
+    foreach($_SESSION["items"] as $item){
+        $message += $item."\r\n"; 
+    }
     $dataJson = json_encode(array(
         "appName" => $epayAppName,
         "userToken" => $userToken,
@@ -98,6 +101,7 @@ var_dump($appToken);
 
     $result = curl_exec($ch);
     var_dump($result);
+    var_dump($_SESSION["prijs"])
     die();
     $_SESSION["oauth_demo"]["message"] = $result;
     header("Location: oauth_demo.php");

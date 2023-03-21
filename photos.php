@@ -1,9 +1,12 @@
 <?php
-
     session_start();
     $counter = isset($_SESSION["items"])  ? count($_SESSION["items"]) : 0;
     $_SESSION["items"] = isset($_SESSION["items"])  ? $_SESSION["items"] : [];
     $groep = isset($_GET["Klas"]) ? $_GET["Klas"] : "null";
+
+    if( $_SESSION["oauth_demo"]["ingelogd"] != true){
+        header("Location: login.php");
+    }
 
     include("account/account.php");
     try {
@@ -28,7 +31,6 @@
 
     
     if($_SERVER["REQUEST_METHOD"] == "POST"){
-        var_dump($_POST);
         if(isset($_POST["NORMAAL"])){
             $_SESSION["items"][count($_SESSION["items"])] = $_POST["klas"]."_".$_POST["NORMAAL"];
         }
