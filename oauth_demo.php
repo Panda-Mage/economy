@@ -4,11 +4,11 @@ if (!isset($_SESSION["oauth_demo"])) {
     $_SESSION["oauth_demo"] = array("ingelogd"=>false);
 }
 
-$oAuthAppName = "oauth_demo";
+$oAuthAppName = "photografie";
 $oAuthLoginUrl = "https://www.go-atheneumoudenaarde.be/dashboard_dev/oAuthLogin.php";
 $oAuthGetUserInfoUrl = "https://www.go-atheneumoudenaarde.be/dashboard_dev/oAuthGetUserInfo.php";
 
-$epayAppName = "oauth_demo";
+$epayAppName = "photografie";
 $epayPassword = "demo";
 $epayLoginUrl = "https://www.go-atheneumoudenaarde.be/epay_dev/public/api/login_check";
 $epayPayUrl = "https://www.go-atheneumoudenaarde.be/epay_dev/public/api/pay";
