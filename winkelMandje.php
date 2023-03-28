@@ -47,7 +47,7 @@
                     <?php endforeach; ?>
                     <tr>
                         <td style="background-color:red;"><p>TOTAAL</p></td>
-                        <td style="background-color:darkred;"><p><?php echo '€'.$prijs; $_SESSION["prijs"] = $prijs;?></p></td>
+                        <td style="background-color:darkred;"><p><?php if (strpos($prijs, '.') > 0) {echo '€'.$prijs."0";} else{ echo '€'.$prijs.".00";} $_SESSION["prijs"] = $prijs;?></p></td>
                     </tr>
                     <tr style="background-color: transparen;">
                         <td></td>
