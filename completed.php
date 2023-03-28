@@ -56,7 +56,7 @@
                     <h1 class="headerText">Bedankt voor je bestelling!</h1>
                     <div class="container_complete_text_normal">
                         <p class="text">uw foto's zijn succesvol besteld, en komen zo snel mogelijk uw kant op.</p>
-                        <p class="text">van zodra deze klaar zijn zullen alle bestelde foto's worden afgeleverd aan uw zoon/dochter.</p>
+                        <p class="text">van zodra deze klaar zijn zullen alle bestelde foto's worden afgeleverd aan uw kind.</p>
                         <p class="text" style="font-size: 22pt;">klik <a href="index.php">hier</a> om terug te keren naar de homepagina</p>
                     </div>
                 </div>

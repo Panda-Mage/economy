@@ -102,7 +102,6 @@ if ($_SESSION["oauth_demo"]["ingelogd"] && isset($_GET["koop"])) {
     $result = curl_exec($ch);
     var_dump($result);
     var_dump($_SESSION["prijs"]);
-    die();
     $_SESSION["oauth_demo"]["message"] = $result;
     header("Location: completed.php");
 }
