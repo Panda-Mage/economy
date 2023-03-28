@@ -3,7 +3,7 @@
         <title>Bedankt!</title>
         <style>
 
-            body, html {
+            html {
                 height: 90%;
                 margin: 0px;
                 background: rgb(192, 192, 192);
@@ -16,20 +16,19 @@
                 top: 0;
                 left: 0;
                 right: 0;
-                position: absolute;
+                position: fixed;
+                z-index: -1;
 
-                background-position: center;
+                background-position: 0em -18em;
                 background-repeat: no-repeat;
-                background-size: contain;
+                background-size: 120em;
 
                 filter: blur(8px);
-                z-index: 0;
             }
 
             .container_complete_text {
                 margin: 5em auto 0em auto;
                 text-align: center;
-                z-index: 1;
             }
 
             .container_complete_text_normal {
@@ -39,11 +38,13 @@
             .headerText {
                 font-family: Verdana, Geneva, Tahoma, sans-serif;
                 font-size: 25pt;
+                color: rgb(197, 7, 81);
             }
 
             .text {
                 font-family: Verdana, Geneva, Tahoma, sans-serif;
                 font-size: 20pt;
+                color: white;
             }
         </style>
     </head>
@@ -51,6 +52,8 @@
 
         <div>
             
+            <div class="container_complete_image"></div>
+
             <div class="container_complete">
                 <div class="container_complete_text">
                     <h1 class="headerText">Bedankt voor je bestelling!</h1>
@@ -61,8 +64,6 @@
                     </div>
                 </div>
             </div>
-
-            <div class="container_complete_image"></div>
 
         </div>
 
