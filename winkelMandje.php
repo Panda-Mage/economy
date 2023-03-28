@@ -47,7 +47,7 @@
                     <?php endforeach; ?>
                     <tr>
                         <td style="background-color:red;"><p>TOTAAL</p></td>
-                        <td style="background-color:darkred;"><p><?php echo '€'.$prijs; $_SESSION["prijs"] = $prijs;?></p></td>
+                        <td style="background-color:darkred;"><p><?php if (strpos($prijs, '.') > 0) {echo '€'.$prijs."0";} else{ echo '€'.$prijs.".00";} $_SESSION["prijs"] = $prijs;?></p></td>
                     </tr>
                     <tr style="background-color: transparen;">
                         <td></td>
@@ -61,7 +61,7 @@
             <h1>U WINKELMANDJE IS LEEG</h1>
             <h1>:(</h1>
         <?php endif; ?>
-        <footer><img src="foto's/custom_foto's//button_onder_toezicht_van_Vlajovzw_HR.jpg" ></footer>
+        <footer><img src="foto's/custom_foto's/button_onder_toezicht_van_Vlajovzw_HR.jpg" ><img src="foto's/custom_foto's/go-ao_logo.png"></footer>
     </body>
     <script>
     </script>
