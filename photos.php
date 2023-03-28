@@ -130,6 +130,6 @@
             }
             
         </script>
-        <footer style="bottom: <?php if($groep!="null"){echo "-60%";}else{echo "0%";} ?> ;"><img src="foto's/custom_foto's//button_onder_toezicht_van_Vlajovzw_HR.jpg" ></footer>
+        <footer style="bottom: <?php if($groep!="null"){echo "-60%";}else{echo "0%";} ?> ;"><img src="foto's/custom_foto's//button_onder_toezicht_van_Vlajovzw_HR.jpg" ><img src="foto's/custom_foto's/go-ao_logo.png"></footer>
     </body>
 </html>

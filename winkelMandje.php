@@ -61,7 +61,7 @@
             <h1>U WINKELMANDJE IS LEEG</h1>
             <h1>:(</h1>
         <?php endif; ?>
-        <footer><img src="foto's/custom_foto's//button_onder_toezicht_van_Vlajovzw_HR.jpg" ></footer>
+        <footer><img src="foto's/custom_foto's/button_onder_toezicht_van_Vlajovzw_HR.jpg" ><img src="foto's/custom_foto's/go-ao_logo.png"></footer>
     </body>
     <script>
     </script>

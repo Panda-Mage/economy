@@ -35,6 +35,6 @@
                 <p>Via deze website kunt u de klasfoto(s) van uw zoon/dochter bestellen. Deze foto's zijn mede mogelijk gemaakt door het <a href="https://bezoek.go-atheneumoudenaarde.be/" target="_new">GO Atheneum Oudenaarde</a> en <a href="https://www.vlajo.org/" target="_new">Vlajo (Vlaamse Jonge Ondernemingen)</a></p>
             </div>
         </div>
-        <footer><img src="foto's/custom_foto's//button_onder_toezicht_van_Vlajovzw_HR.jpg" ></footer>
+        <footer><img src="foto's/custom_foto's//button_onder_toezicht_van_Vlajovzw_HR.jpg" ><img src="foto's/custom_foto's/go-ao_logo.png"></footer>
     </body>
 </html>
