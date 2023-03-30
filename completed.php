@@ -100,6 +100,7 @@
             <?php else: ?>
                 <h1>Dit is een zeldzame ERROR</h1>
                 <h1>Contacteer Roel Verleyen via smartschool</h1>
+                <?php var_dump($_SESSION["oauth_demo"]["message"]); ?>
             <?php endif; ?>
         </div>
 

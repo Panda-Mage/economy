@@ -113,7 +113,6 @@ if ($gebruikerIsIngelogd) {
     $voornaam = $_SESSION["oauth_demo"]["voornaam"];
     $klas = $_SESSION["oauth_demo"]["klas"];
     $message = isset($_SESSION["oauth_demo"]["message"]) ? $_SESSION["oauth_demo"]["message"] : "";
-    unset($_SESSION["oauth_demo"]["message"]);
 }
 ?>
 <html>
