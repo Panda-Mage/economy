@@ -1,4 +1,8 @@
 <?php 
+   ini_set('display_errors', '1');
+   ini_set('display_startup_errors', '1');
+   error_reporting(E_ALL);
+
     session_start();
 
     if( $_SESSION["oauth_demo"]["ingelogd"] != true){
@@ -81,16 +85,14 @@
                     </div>
                 </div>
                 <?php 
-                    $aankoop = "";
-                    foreach($_SESSION["items"] as $item ){
-                        $aankoop += $item.", ";
-                    }
+                    
+                    $aankoop = implode(", ",$_SESSION["items"]);
 
                     $stmtAankoop = $conn->prepare("INSERT INTO Aankopen (Voornaam, Achternaam, Klas, Items, Prijs) 
-                                                   VALUES(".$_SESSION["oauth_demo"]["voornaam"].",".$_SESSION["oauth_demo"]["naam"].",".$_SESSION["oauth_demo"]["klas"].",".$aankoop.",".$_SESSION["prijs"].")
+                                                   VALUES('".$_SESSION["oauth_demo"]["voornaam"]."','".$_SESSION["oauth_demo"]["naam"]."','".$_SESSION["oauth_demo"]["klas"]."','".$aankoop."',".$_SESSION["prijs"].")
                                                 ");
                     $stmtAankoop->execute();
-                    var_dump('INSERT INTO Aankopen (Voornaam, Achternaam, Klas, Items, Prijs) VALUES('.$_SESSION["oauth_demo"]["voornaam"].','.$_SESSION["oauth_demo"]["naam"].','.$_SESSION["oauth_demo"]["klas"].','.$aankoop.','.$_SESSION["prijs"].')');
+                    
                     $_SESSION["prijs"] = null;
                     $_SESSION["items"] = null;
                 ?>
