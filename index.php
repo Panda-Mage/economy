@@ -2,9 +2,9 @@
     session_start();
     $counter = isset($_SESSION["items"])  ? count($_SESSION["items"]) : 0;
 
-    // if( $_SESSION["oauth_demo"]["ingelogd"] != true){
-    //     header("Location: login.php");
-    // }
+    if( $_SESSION["oauth_demo"]["ingelogd"] != true){
+        header("Location: login.php");
+    }
 ?>
 <html>
     <head>
