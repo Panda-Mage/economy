@@ -34,11 +34,23 @@
     </head>
     <body>
 
-        <nav>
-            <a href="photos.php?klas=<?php echo $groep; ?>"><p>TERUG NAAR FOTO'S</p></a>
-        </nav>
-        <div style="width: fit-content; margin: 2em auto;">
-            <img src="<?php echo $fotoSource; ?>">
+        <div class="main">
+
+            <nav>
+                <a href="photos.php?klas=<?php echo $groep; ?>"><p>TERUG NAAR FOTO'S</p></a>
+            </nav>
+            <div style="width: fit-content; margin: 2em auto;">
+                <img src="<?php echo $fotoSource; ?>">
+            </div>
+
+            <div class="footer">
+                <div class="verticalAlign">
+                    <img src="foto's/custom_foto's//button_onder_toezicht_van_Vlajovzw_HR.jpg" >
+                    <img src="foto's/custom_foto's/go-ao_logo.png">
+                </div>
+            </div>
+            
         </div>
+
     </body>
 </html>

@@ -66,12 +66,13 @@ body {
 
 .footer img {
     width: 8em;
-    height: 4em;
+    height: 6vh;
+    margin: 1vh 0px 0px 0px;
 }
 
 .main {
     min-height: 100%;
-    position:relative;
+    position: relative;
 }
 
 h1 {
