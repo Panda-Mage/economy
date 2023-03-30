@@ -14,7 +14,7 @@
 .container_content {
     width: fit-content;
     margin: 2em auto;
-    padding: 5em;
+    padding: 5em 5em 8vh 5em;
     background-color: rgb(242, 242, 242);
     border: 4em ridge rgb(128, 64, 0);
 }
