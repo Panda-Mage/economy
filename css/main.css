@@ -51,23 +51,27 @@ body {
     margin: 0px;
     background-color: #f2f2f2;
     background-image: url("../foto's/custom_foto's/matermark.png");
-    scroll-behavior: smooth;
-}
-
-html {
+    overflow-y: scroll;
     scroll-behavior: smooth;
 }
 
 .footer {
     height: 8vh;
-    width: 100%;
     background-color: black;
-    /* padding: 2.5vh 0px; */
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .footer img {
     width: 8em;
     height: 4em;
+}
+
+.main {
+    min-height: 100%;
+    position:relative;
 }
 
 h1 {
