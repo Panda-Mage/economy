@@ -90,10 +90,11 @@
                                                    VALUES(".$_SESSION["oauth_demo"]["voornaam"].",".$_SESSION["oauth_demo"]["naam"].",".$_SESSION["oauth_demo"]["klas"].",".$aankoop.",".$_SESSION["prijs"].")
                                                 ");
                     $stmtAankoop->execute();
-
+                    var_dump('INSERT INTO Aankopen (Voornaam, Achternaam, Klas, Items, Prijs) VALUES('.$_SESSION["oauth_demo"]["voornaam"].','.$_SESSION["oauth_demo"]["naam"].','.$_SESSION["oauth_demo"]["klas"].','.$aankoop.','.$_SESSION["prijs"].')');
                     $_SESSION["prijs"] = null;
                     $_SESSION["items"] = null;
                 ?>
+                
             <?php elseif(strpos($_SESSION["oauth_demo"]["message"], "Saldo ontoereikend") > 0): ?>
                 <h1>Er staat niet genoed geld op u epay voor deze aankoop.</h1>
                 <h1>Gelieve u saldo aan te vullen en dan nogmaals opniew te proberen!</h1>
