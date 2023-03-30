@@ -2,6 +2,10 @@
     text-align: center;
 }
 
+.verticalAlign {
+    vertical-align: middle;
+}
+
 #counter {
     margin: 0px;
     font-size: 20px;
@@ -54,14 +58,14 @@ html {
     scroll-behavior: smooth;
 }
 
-footer {
-    position: absolute;
-    bottom: 0%;
-    background-color: black;
+.footer {
+    height: 8vh;
     width: 100%;
+    background-color: black;
+    /* padding: 2.5vh 0px; */
 }
 
-footer img {
+.footer img {
     width: 8em;
     height: 4em;
 }

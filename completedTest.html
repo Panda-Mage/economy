@@ -27,8 +27,12 @@
             }
 
             .container_complete_text {
+                width: fit-content;
                 margin: 5em auto 0em auto;
+                padding: 2em;
                 text-align: center;
+                background: rgba(0, 0, 0, 0.8);
+                border: 1.8em ridge rgb(128, 64, 0);
             }
 
             .container_complete_text_normal {
@@ -46,6 +50,12 @@
                 font-size: 20pt;
                 color: white;
             }
+
+            .Completed_return_link {
+                color: rgb(197, 7, 81);
+                text-decoration: none;
+            }
+
         </style>
     </head>
     <body>
@@ -60,7 +70,7 @@
                     <div class="container_complete_text_normal">
                         <p class="text">uw foto's zijn succesvol besteld, en komen zo snel mogelijk uw kant op.</p>
                         <p class="text">van zodra deze klaar zijn zullen alle bestelde foto's worden afgeleverd aan uw zoon/dochter.</p>
-                        <p class="text" style="font-size: 22pt;">klik <a href="index.php">hier</a> om terug te keren naar de homepagina</p>
+                        <p class="text" style="font-size: 22pt;"> <span style="color: rgb(197, 7, 81); font-size: 30pt;">&#8592;</span> <a class="Completed_return_link" href="index.php">Terug naar homepagina</a></p>
                     </div>
                 </div>
             </div>

@@ -1,5 +1,5 @@
 .container_text {
-    width: 50em;
+    width: 51vw;
     margin: 2em auto;
 }
 
@@ -7,7 +7,8 @@
     display: inline-block;
     width: fit-content;
     font-size: 15pt;
-    margin: 0;
+    margin: 0.5em 0px;
+    line-height: 1.5em;
 }
 
 .container_content {
@@ -31,6 +32,7 @@
 #headtag {
     border: 3px lightgray dotted;
     background-color: aquamarine;
-    width: 40%;
+    width: fit-content;
+    padding: 0px 2em;
     margin: auto;
 }

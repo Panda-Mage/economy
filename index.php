@@ -2,9 +2,9 @@
     session_start();
     $counter = isset($_SESSION["items"])  ? count($_SESSION["items"]) : 0;
 
-    if( $_SESSION["oauth_demo"]["ingelogd"] != true){
-        header("Location: login.php");
-    }
+    // if( $_SESSION["oauth_demo"]["ingelogd"] != true){
+    //     header("Location: login.php");
+    // }
 ?>
 <html>
     <head>
@@ -31,10 +31,15 @@
             </div>
             <div class="container_text alignCenter">
                 <h1>OVER ONS:</h1>
-                <p>Wij zijn een studenten onderneming bestaande uit 4 leerlingen van het 6e middelbaar.</p>
-                <p>Via deze website kunt u de klasfoto(s) van uw zoon/dochter bestellen. Deze foto's zijn mede mogelijk gemaakt door het <a href="https://bezoek.go-atheneumoudenaarde.be/" target="_new">GO Atheneum Oudenaarde</a> en <a href="https://www.vlajo.org/" target="_new">Vlajo (Vlaamse Jonge Ondernemingen)</a></p>
+                <p>Wij zijn 4 enthousiaste junior ondernemers van de richting 6 Informaticabeheer en realiseren dit schooljaar de klasfoto's.</p>
+                <p>Via deze website kunt u de klasfoto(s) van uzelf of uw zoon/dochter bestellen. Dit project hebben wij kunnen realiseren dankzij het  <a href="https://bezoek.go-atheneumoudenaarde.be/" target="_new">GO Atheneum Oudenaarde</a> en <a href="https://www.vlajo.org/" target="_new">Vlajo (Vlaamse Jonge Ondernemingen)</a></p>
             </div>
         </div>
-        <footer><img src="foto's/custom_foto's//button_onder_toezicht_van_Vlajovzw_HR.jpg" ><img src="foto's/custom_foto's/go-ao_logo.png"></footer>
+        <div class="footer">
+            <div class="verticalAlign">
+                <img src="foto's/custom_foto's//button_onder_toezicht_van_Vlajovzw_HR.jpg" >
+                <img src="foto's/custom_foto's/go-ao_logo.png">
+            </div>
+        </div>
     </body>
 </html>
