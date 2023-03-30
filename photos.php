@@ -58,51 +58,53 @@
                 <a href="photos.php"><p>FOTO'S</p></a>
                 <a href="winkelMandje.php"><img src="foto's/custom_foto's/winkelMandje.png"><p id="counter"><?php echo $counter ?></p></a> 
             </nav>
-            
-            <div id="kiesKlasDiv">
-                <form>
-                    <label>KLASSEN:</label>
-                    <select id="klas" name="Klas" onchange="this.form.submit(klasgekozen)">
-                        <option value="null">SELECT</option>
-                        <?php foreach($klassen as $klas): ?>
-                            <option value="<?php echo $klas["klasnaam"]; ?>" <?php if($klas["klasnaam"] == $groep){echo "selected";} ?>><?php echo $klas["klasnaam"]; ?></option>
-                        <?php endforeach; ?>
-                    </select>
-                </form>
+
+            <div class="container_content">
+                <div id="kiesKlasDiv">
+                    <form>
+                        <label>KLASSEN:</label>
+                        <select id="klas" name="Klas" onchange="this.form.submit(klasgekozen)">
+                            <option value="null">SELECT</option>
+                            <?php foreach($klassen as $klas): ?>
+                                <option value="<?php echo $klas["klasnaam"]; ?>" <?php if($klas["klasnaam"] == $groep){echo "selected";} ?>><?php echo $klas["klasnaam"]; ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </form>
+                </div>
+                
+                <?php if($groep != "null"): ?>
+                    <div id="photoDiv">
+                        <form action="afbeelding.php" method="POST">
+                            <input style="display: none;" type="text" name="klas" value="<?php echo $groep; ?>">
+                            <input style="display: none;" type="text" name="foto" value="/Normaal.jpg">
+                            <img onclick="submitForm(event)" src="foto's/<?php echo $groep; ?>/Normaal.jpg" id="links" onError='ErrorNormaal(this)'>
+                        </form>
+                        <form action="afbeelding.php" method="POST">
+                            <input style="display: none;" type="text" name="klas" value="<?php echo $groep; ?>">
+                            <input style="display: none;" type="text" name="foto" value="/Gek.jpg">
+                            <img onclick="submitForm(event)" src="foto's/<?php echo $groep; ?>/Gek.jpg" id="rechts" onError='ErrorGek(this)'>
+                        </form>
+                    </div>
+                    <div id="koopDiv">
+                        <form method="post">
+                            <div id="normaal">
+                                <p>€3,50</p>
+                                <input name = "NORMAAL" type="submit" value="NORMAAL">
+                            </div>
+                            <div id="gek">
+                                <p>€3,50</p>
+                                <input name = "GEK" type="submit" value="GEK">
+                            </div>
+                            <br>
+                            <div id="pakket">
+                                <p>€5,50<p>
+                                <input name = "PAKKET" type="submit" value="PAKKET">
+                            </div>
+                            <input type="text" class="invisible" name="klas" value="<?php echo $groep ?>">
+                        </form>
+                    </div>
+                <?php endif; ?>
             </div>
-            
-            <?php if($groep != "null"): ?>
-                <div id="photoDiv">
-                    <form action="afbeelding.php" method="POST">
-                        <input style="display: none;" type="text" name="klas" value="<?php echo $groep; ?>">
-                        <input style="display: none;" type="text" name="foto" value="/Normaal.jpg">
-                        <img onclick="submitForm(event)" src="foto's/<?php echo $groep; ?>/Normaal.jpg" id="links" onError='ErrorNormaal(this)'>
-                    </form>
-                    <form action="afbeelding.php" method="POST">
-                        <input style="display: none;" type="text" name="klas" value="<?php echo $groep; ?>">
-                        <input style="display: none;" type="text" name="foto" value="/Gek.jpg">
-                        <img onclick="submitForm(event)" src="foto's/<?php echo $groep; ?>/Gek.jpg" id="rechts" onError='ErrorGek(this)'>
-                    </form>
-                </div>
-                <div id="koopDiv">
-                    <form method="post">
-                        <div id="normaal">
-                            <p>€3,50</p>
-                            <input name = "NORMAAL" type="submit" value="NORMAAL">
-                        </div>
-                        <div id="gek">
-                            <p>€3,50</p>
-                            <input name = "GEK" type="submit" value="GEK">
-                        </div>
-                        <br>
-                        <div id="pakket">
-                            <p>€5,50<p>
-                            <input name = "PAKKET" type="submit" value="PAKKET">
-                        </div>
-                        <input type="text" class="invisible" name="klas" value="<?php echo $groep ?>">
-                    </form>
-                </div>
-            <?php endif; ?>
 
             <div class="footer">
                 <div class="verticalAlign">
@@ -141,6 +143,5 @@
             }
             
         </script>
-        <footer style="bottom: <?php if($groep!="null"){echo "-60%";}else{echo "0%";} ?> ;"><img src="foto's/custom_foto's//button_onder_toezicht_van_Vlajovzw_HR.jpg" ><img src="foto's/custom_foto's/go-ao_logo.png"></footer>
     </body>
 </html>
