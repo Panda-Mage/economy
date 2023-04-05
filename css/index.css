@@ -12,7 +12,7 @@
 }
 
 .container_content_border {
-    padding: 4em;
+    padding: 4em 4em 2em 4em;
     margin-top: 8vh;
     background-color: rgb(242, 242, 242);
     border: 4em ridge rgb(128, 64, 0);
@@ -40,4 +40,3 @@
     padding: 0px 2em;
     margin: auto;
 }
-

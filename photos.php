@@ -87,20 +87,22 @@
                     </div>
                     <div id="koopDiv">
                         <form method="post">
-                            <div id="normaal">
-                                <p>€3,50</p>
-                                <input name = "NORMAAL" type="submit" value="NORMAAL">
+                            <div style="text-align: center; width: 100%;">
+                                <div id="normaal">
+                                    <p>€3,50</p>
+                                    <input name = "NORMAAL" type="submit" value="NORMAAL">
+                                </div>
+                                <div id="gek">
+                                    <p>€3,50</p>
+                                    <input name = "GEK" type="submit" value="GEK">
+                                </div>
+                                <br>
+                                <div id="pakket">
+                                    <p>€5,50<p>
+                                    <input name = "PAKKET" type="submit" value="PAKKET">
+                                </div>
+                                <input type="text" class="invisible" name="klas" value="<?php echo $groep ?>">
                             </div>
-                            <div id="gek">
-                                <p>€3,50</p>
-                                <input name = "GEK" type="submit" value="GEK">
-                            </div>
-                            <br>
-                            <div id="pakket">
-                                <p>€5,50<p>
-                                <input name = "PAKKET" type="submit" value="PAKKET">
-                            </div>
-                            <input type="text" class="invisible" name="klas" value="<?php echo $groep ?>">
                         </form>
                     </div>
                 <?php endif; ?>

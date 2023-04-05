@@ -5,7 +5,7 @@
     border-radius: 25px;
     position: absolute;
     left: 50%;
-    top: 40%;
+    top: 20%;
     transform: translate(-50%, -50%);
 }
 
@@ -28,7 +28,7 @@
 
 #photoDiv {
     position: absolute;
-    top: 50%;
+    top: 30%;
     width: 60em;
     height: auto;
     transform: translate(-50%, 0%);
@@ -59,7 +59,7 @@
 
 #koopDiv {
     position: absolute;
-    top: 780px;
+    top: 65%;
     width: 100%;
 }
 
@@ -86,15 +86,15 @@
 }
 
 #koopDiv #normaal {
-    margin-left: 23%;
-    margin-right: 35%;
+    padding-right: 20em;
 }
 
 #koopDiv #pakket {
-    margin-left: 45%;
+    padding-left: 3.5em;
 }
 
 .invisible {
+    display: none;
     background-color: transparent;
     color: transparent;
     border: transparent;
