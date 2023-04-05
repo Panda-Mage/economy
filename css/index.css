@@ -11,12 +11,16 @@
     line-height: 1.5em;
 }
 
-.container_content {
-    width: fit-content;
-    margin: 2em auto;
-    padding: 5em;
+.container_content_border {
+    padding: 4em;
+    margin-top: 8vh;
     background-color: rgb(242, 242, 242);
     border: 4em ridge rgb(128, 64, 0);
+}
+
+.container_content {
+    width: fit-content;
+    margin: auto;
 }
 
 #headtag h1 {

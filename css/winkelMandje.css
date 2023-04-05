@@ -1,32 +1,41 @@
-#tableDiv tr{
-    width: 200px;
-}
-.header{
-    background-color: darkslategray;
-}
-#tableDiv table{
-    size: auto;
-}
-
-#tableDiv p{
-    color: white;
-}
-table{
+table {
     position: absolute;
     width: 500px;
     text-align: center;
     transform: translate(-50%, 0%);
     left: 50%;
-    top: 250px;
+    top: 8vh;
 }
-table tr td .invisible{
+
+table tr td .invisible {
     background-color: transparent;
     color: transparent;
     border: transparent;
     width: 0px;
     height: 0px;
 }
-.trash:hover{
+
+.header {
+    background-color: darkslategray;
+}
+
+.trash:hover {
     margin-top: 7px;
     margin-bottom: 7px;
+}
+
+#tableDiv tr {
+    width: 200px;
+}
+
+#tableDiv table {
+    size: auto;
+    padding: 4em 1.7em 4em 4em;
+    /* border-radius: 5em; */
+    border: 1em ridge rgb(128, 64, 0);
+    background-color: rgb(242, 242, 242);
+}
+
+#tableDiv p {
+    color: white;
 }

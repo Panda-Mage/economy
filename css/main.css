@@ -19,6 +19,9 @@
 
 nav {
     background-color: rgb(197, 7, 81);
+    position: fixed;
+    top: 0;
+    width: 100%;
     box-shadow: 0em 0px 0.8em black;
 }
 
@@ -71,11 +74,11 @@ html {
 }
 
 .container_content {
-    padding-bottom: 8vh;
+    height: 92%;
 }
 
 .main {
-    min-height: 100%;
+    min-height: 80%;
     position: relative;
 }
 
