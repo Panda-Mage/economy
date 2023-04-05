@@ -1,7 +1,4 @@
-<?php 
-   ini_set('display_errors', '1');
-   ini_set('display_startup_errors', '1');
-   error_reporting(E_ALL);
+<?php
 
     session_start();
 
@@ -26,7 +23,7 @@
         <title>Bedankt!</title>
         <style>
 
-            body, html {
+            html {
                 height: 90%;
                 margin: 0px;
                 background: rgb(192, 192, 192);
@@ -39,20 +36,23 @@
                 top: 0;
                 left: 0;
                 right: 0;
-                position: absolute;
+                position: fixed;
+                z-index: -1;
 
-                background-position: center;
+                background-position: 0em -18em;
                 background-repeat: no-repeat;
-                background-size: contain;
+                background-size: 120em;
 
                 filter: blur(8px);
-                z-index: 0;
             }
 
             .container_complete_text {
+                width: fit-content;
                 margin: 5em auto 0em auto;
+                padding: 2em;
                 text-align: center;
-                z-index: 1;
+                background: rgba(0, 0, 0, 0.8);
+                border: 1.8em ridge rgb(128, 64, 0);
             }
 
             .container_complete_text_normal {
@@ -62,25 +62,34 @@
             .headerText {
                 font-family: Verdana, Geneva, Tahoma, sans-serif;
                 font-size: 25pt;
+                color: rgb(197, 7, 81);
             }
 
             .text {
                 font-family: Verdana, Geneva, Tahoma, sans-serif;
                 font-size: 20pt;
+                color: white;
             }
+
+            .Completed_return_link {
+                color: rgb(197, 7, 81);
+                text-decoration: none;
+            }
+
         </style>
     </head>
     <body>
 
         <div>
             <?php if( stripos($_SESSION["oauth_demo"]["message"], "200") > 0): ?>
+                <div class="container_complete_image"></div>
                 <div class="container_complete">
                     <div class="container_complete_text">
                         <h1 class="headerText">Bedankt voor je bestelling!</h1>
                         <div class="container_complete_text_normal">
-                            <p class="text">uw foto's zijn succesvol besteld, en komen zo snel mogelijk uw kant op.</p>
-                            <p class="text">van zodra deze klaar zijn zullen alle bestelde foto's worden afgeleverd aan uw kind.</p>
-                            <p class="text" style="font-size: 22pt;">klik <a href="index.php">hier</a> om terug te keren naar de homepagina</p>
+                            <p class="text">Uw foto's zijn succesvol besteld.</p>
+                            <p class="text">Van zodra deze klaar zijn, zullen alle bestelde klasfoto's worden afgegeven aan uw zoon/dochter.</p>
+                            <p class="text" style="font-size: 22pt;"> <span style="color: rgb(197, 7, 81); font-size: 30pt;">&#8592;</span> <a class="Completed_return_link" href="index.php">Terug naar homepagina</a></p>
                         </div>
                     </div>
                 </div>
@@ -98,11 +107,10 @@
                 ?>
                 
             <?php elseif(strpos($_SESSION["oauth_demo"]["message"], "Saldo ontoereikend") > 0): ?>
-                <h1>Er staat niet genoed geld op u epay voor deze aankoop.</h1>
-                <h1>Gelieve u saldo aan te vullen en dan nogmaals opniew te proberen!</h1>
+                <h1>Er staat niet genoed saldo op uw epay voor deze aankoop.</h1>
+                <h1>Gelieve uw saldo aan te vullen en dan nogmaals opnieuw te proberen!</h1>
             <?php else: ?>
-                <h1>Dit is een zeldzame ERROR</h1>
-                <h1>Contacteer Roel Verleyen via smartschool</h1>
+                <h1>Er liep iets mis. Probeer het later opnieuw!</h1>
                 <?php var_dump($_SESSION["oauth_demo"]["message"]); ?>
             <?php endif; ?>
         </div>
