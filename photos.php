@@ -98,8 +98,8 @@
                                 </div>
                                 <br>
                                 <div id="pakket">
-                                    <p>€5,50<p>
-                                    <input name = "PAKKET" type="submit" value="PAKKET">
+                                    <p>€5,50</p>
+                                    <input name="PAKKET" type="submit" value="PAKKET">
                                 </div>
                                 <input type="text" class="invisible" name="klas" value="<?php echo $groep ?>">
                             </div>

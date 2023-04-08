@@ -63,6 +63,18 @@
     width: 100%;
 }
 
+#normaal p {
+    background-color: gray;
+}
+
+#gek p {
+    background-color: gray;
+}
+
+#pakket p {
+    background-color: gray;
+}
+
 #koopDiv div input {
     background-color: cadetblue;
     border-radius: 25px;

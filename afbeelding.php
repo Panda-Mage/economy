@@ -40,7 +40,7 @@
             <nav>
                 <a href="photos.php?klas=<?php echo $groep; ?>"><p>TERUG NAAR FOTO'S</p></a>
             </nav>
-            <div style="width: fit-content; margin: 2em auto;">
+            <div class="container_content" style="width: fit-content; margin-left: auto; margin-right: auto;">
                 <img src="<?php echo $fotoSource; ?>">
             </div>
 
