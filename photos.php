@@ -3,6 +3,7 @@
     $counter = isset($_SESSION["items"])  ? count($_SESSION["items"]) : 0;
     $_SESSION["items"] = isset($_SESSION["items"])  ? $_SESSION["items"] : [];
     $groep = isset($_GET["Klas"]) ? $_GET["Klas"] : "null";
+    $alertUser = false;
 
     if( $_SESSION["oauth_demo"]["ingelogd"] != true){
         header("Location: login.php");
@@ -41,6 +42,7 @@
             $_SESSION["items"][count($_SESSION["items"])] = $_POST["klas"]."_".$_POST["PAKKET"];
         }
         $counter++;
+        $alertUser = true;
     }
 ?>
 <html>
@@ -151,6 +153,15 @@
                 let form = event.target.parentElement;
                 form.submit();
             }
+
+            <?php 
+            
+            if ($alertUser) {
+                $alertUser = false;
+                echo "alert('Foto is succesvol toegevoegd aan winkelmandje!');";
+            }
+            
+            ?>
             
         </script>
     </body>
