@@ -93,13 +93,13 @@
                                     <input name = "NORMAAL" type="submit" value="NORMAAL">
                                 </div>
                                 <div id="gek">
-                                    <p>€3,50</p>
-                                    <input name = "GEK" type="submit" value="GEK">
+                                    <p id="rechterPrijs">€3,50</p>
+                                    <input name = "GEK" type="submit" value="GEK" id="gekkeKnop">
                                 </div>
                                 <br>
                                 <div id="pakket">
-                                    <p>€5,50</p>
-                                    <input name="PAKKET" type="submit" value="PAKKET">
+                                    <p id="middelPrijs">€5,50</p>
+                                    <input name="PAKKET" type="submit" value="PAKKET" id="middelsteKnop">
                                 </div>
                                 <input type="text" class="invisible" name="klas" value="<?php echo $groep ?>">
                             </div>
@@ -122,6 +122,10 @@
             var klas = document.getElementById('klas');
             var linkerFoto = document.getElementById('links');
             var rechterFoto = document.getElementById('rechts');
+            var rechterKoopKnop = document.getElementById('gekkeKnop');
+            var middelKoopKnop = document.getElementById('middelsteKnop');
+            var rechterPrijs = document.getElementById('rechterPrijs');
+            var middelPrijs = document.getElementById('middelPrijs');
 
             var errors = [];
 
@@ -136,6 +140,10 @@
 
             function ErrorGek(origine){
                 origine.src = "foto's/custom_foto's/errorGek.jpg";
+                rechterKoopKnop.style.display = "none";
+                middelKoopKnop.style.display = "none";
+                rechterPrijs.style.display = "none";
+                middelPrijs.style.display = "none";
             }
 
             function submitForm(event) {
