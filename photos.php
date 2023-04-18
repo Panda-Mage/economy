@@ -62,8 +62,8 @@
             <div class="container_content">
                 <div id="kiesKlasDiv">
                     <form>
-                        <label>KLASSEN:</label>
-                        <select id="klas" name="Klas" onchange="this.form.submit(klasgekozen)">
+                        <label class="mobilePlayer">KLASSEN:</label>
+                        <select class="mobilePlayer" id="klas" name="Klas" onchange="this.form.submit(klasgekozen)">
                             <option value="null">SELECT</option>
                             <?php foreach($klassen as $klas): ?>
                                 <option value="<?php echo $klas["klasnaam"]; ?>" <?php if($klas["klasnaam"] == $groep){echo "selected";} ?>><?php echo $klas["klasnaam"]; ?></option>
