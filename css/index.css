@@ -40,3 +40,11 @@
     padding: 0px 2em;
     margin: auto;
 }
+button{
+    border-radius: 25px;
+    font-size: 40px;
+    padding: 10px;
+    background-color: aquamarine;
+    margin-top: 15px;
+    
+}

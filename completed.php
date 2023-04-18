@@ -87,7 +87,7 @@
                     <div class="container_complete_text">
                         <h1 class="headerText">Bedankt voor je bestelling!</h1>
                         <div class="container_complete_text_normal">
-                            <p class="text">Uw foto's zijn succesvol besteld.</p>
+                            <p class="text">Uw foto's zijn succesvol besteld en betaald.</p>
                             <p class="text">Van zodra deze klaar zijn, zullen alle bestelde klasfoto's worden afgegeven aan uw zoon/dochter.</p>
                             <p class="text" style="font-size: 22pt;"> <span style="color: rgb(197, 7, 81); font-size: 30pt;">&#8592;</span> <a class="Completed_return_link" href="index.php">Terug naar homepagina</a></p>
                         </div>

@@ -57,7 +57,7 @@
                             </tr>
                             <tr style="background-color: transparen;">
                                 <td></td>
-                                <form method="post"><td><input style="margin-top: 1em" type="submit" name="betalen" value="BESTELLEN"></td></form>
+                                <form method="post"><td><input style="margin-top: 1em" type="submit" name="betalen" value="BETALEN"></td></form>
                             </tr>
                         </table>
                     </div>
