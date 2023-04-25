@@ -39,7 +39,7 @@
                         <h1>OVER ONS:</h1>
                         <p>Wij zijn 4 enthousiaste junior ondernemers van de richting 6 Informaticabeheer en realiseren dit schooljaar de klasfoto's.</p>
                         <p>Via deze website kunt u de klasfoto(s) van uzelf of uw zoon/dochter bestellen. Dit project hebben wij kunnen realiseren dankzij het  <a href="https://bezoek.go-atheneumoudenaarde.be/" target="_new">GO Atheneum Oudenaarde</a> en <a href="https://www.vlajo.org/" target="_new">Vlajo (Vlaamse Jonge Ondernemingen)</a></p>
-                        <button onclick="location.href= 'http:/'+'/roel.go-ao.be/photografie/photos.php'"><b>NAAR FOTO'S<b></button>
+                        <button onclick="location.href= 'http:/'+'/roel.go-ao.be/photografie/photos.php'" style="cursor: pointer;"><b>NAAR FOTO'S<b></button>
                     </div>
                 </div>
             </div>

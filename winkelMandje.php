@@ -48,7 +48,7 @@
                                 <tr >
                                     <td style="background-color: <?php if($index%2 == 0){ echo "darkgray";}else{ echo "gray";} ?>;"><p><?php echo ($item); ?></p></td>
                                     <td style="background-color: <?php if($index%2 == 0){ echo "darkgray";}else{ echo "gray";} ?>;"><p><?php if(strrpos($item,"PAKKET")){ echo "€5,50"; $prijs = $prijs+5.5; } else{echo "€3,50"; $prijs = $prijs+3.5;} ?></p></td>
-                                    <form method="post"><td style="background-color: transparent; cursor:grab;"><button onclick="this.form.submit()" style="background-color: transparent; color:transparent; border:none;"><img class="trash" src="foto's/custom_foto's/trashBin.png"></button><input type="text" name="row" value="<?php echo $index  ?>" class="invisible"></td></form>
+                                    <form method="post"><td style="background-color: transparent; cursor: pointer;"><button onclick="this.form.submit()" style="background-color: transparent; color:transparent; border:none; cursor: pointer;"><img class="trash" src="foto's/custom_foto's/trashBin.png"></button><input type="text" name="row" value="<?php echo $index  ?>" class="invisible"></td></form>
                                 </tr>
                             <?php endforeach; ?>
                             <tr>
@@ -57,7 +57,7 @@
                             </tr>
                             <tr style="background-color: transparen;">
                                 <td></td>
-                                <form method="post"><td><input style="margin-top: 1em" type="submit" name="betalen" value="BETALEN"></td></form>
+                                <form method="post"><td style="cursor: pointer;"><input style="margin-top: 1em; cursor: pointer;" type="submit" name="betalen" value="BETALEN"></td></form>
                             </tr>
                         </table>
                     </div>

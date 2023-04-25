@@ -76,12 +76,12 @@
                 
                 <?php if($groep != "null"): ?>
                     <div id="photoDiv">
-                        <form action="afbeelding.php" method="POST">
+                        <form action="afbeelding.php" method="POST" style="cursor: pointer;">
                             <input style="display: none;" type="text" name="klas" value="<?php echo $groep; ?>">
                             <input style="display: none;" type="text" name="foto" value="/Normaal.jpg">
                             <img onclick="submitForm(event)" src="foto's/<?php echo $groep; ?>/Normaal.jpg" id="links" onError='ErrorNormaal(this)'>
                         </form>
-                        <form action="afbeelding.php" method="POST">
+                        <form action="afbeelding.php" method="POST" style="cursor: pointer;">
                             <input style="display: none;" type="text" name="klas" value="<?php echo $groep; ?>">
                             <input style="display: none;" type="text" name="foto" value="/Gek.jpg">
                             <img onclick="submitForm(event)" src="foto's/<?php echo $groep; ?>/Gek.jpg" id="rechts" onError='ErrorGek(this)'>
