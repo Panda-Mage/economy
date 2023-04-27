@@ -48,6 +48,7 @@ if (isset($_GET["code"])) {
     $_SESSION["oauth_demo"]["naam"] = $result["naam"];
     $_SESSION["oauth_demo"]["klas"] = $result["klas"];
     $_SESSION["oauth_demo"]["userToken"] = $userToken;
+    var_dump($result);die();
     header("Location: oauth_demo.php");
 }
 
